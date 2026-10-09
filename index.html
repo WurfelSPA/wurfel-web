@@ -1,159 +1,443 @@
-<!-- Desarrollado por Ing. Alex Meléndez — Patagónica Inmobiliaria, con la asistencia de Claude AI (Anthropic). -->
 <!DOCTYPE html>
+<!-- Desarrollado por Ing. Alex Meléndez — Würfel, con la asistencia de Claude AI (Anthropic). -->
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Würfel SpA | Automatización e Integración de Sistemas con IA</title>
-<meta name="description" content="Würfel SpA automatiza procesos, conecta sistemas y potencia la productividad de tu empresa mediante inteligencia artificial y soluciones tecnológicas a medida." />
+<title>Würfel | Automatización de procesos con IA</title>
+<meta name="description" content="Würfel diseña e implementa automatizaciones de procesos con n8n e inteligencia artificial: integración de sistemas, flujos documentales, agentes con IA y tableros de control para empresas en Chile." />
+<meta name="theme-color" content="#07090d" />
+<meta property="og:title" content="Würfel | Automatización de procesos con IA" />
+<meta property="og:description" content="Procesos que se ejecutan solos. Automatización e integración de sistemas apoyadas en inteligencia artificial." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/logo.png" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
-<link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
 
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow--bronze"></div>
+  <div class="bg-glow bg-glow--cyan"></div>
+</div>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo">
-      <img src="assets/icon-crop.png" alt="Würfel" class="logo-icon" />
-      <span>Würfel</span>
+    <a href="#top" class="brand" aria-label="Würfel, inicio">
+      <img src="assets/mark.png" alt="" class="brand-mark" />
+      <span class="brand-name">Würfel</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#metodo">Método</a>
+      <a href="#casos">Casos</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#contacto" class="nav-cta-mobile">Solicitar diagnóstico</a>
     </nav>
-    <a href="#contacto" class="btn btn-primary nav-cta">Contáctanos</a>
-    <button class="menu-toggle" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
+    <a href="#contacto" class="btn btn-primary btn-sm nav-cta">Solicitar diagnóstico</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
     </button>
   </div>
 </header>
 
 <main>
+
+  <!-- HERO -->
   <section class="hero" id="top">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Automatización · Integración · Inteligencia Artificial</p>
-        <h1>Automatizamos procesos, conectamos sistemas y potenciamos la productividad de tu empresa mediante inteligencia artificial y soluciones tecnológicas a medida.</h1>
+        <p class="kicker"><span class="dot"></span>Automatización de procesos · IA aplicada</p>
+        <h1>Procesos que se ejecutan solos.<br><span class="grad">Equipos que se enfocan en decidir.</span></h1>
+        <p class="hero-lead">
+          Diseño e implemento automatizaciones con <strong>n8n</strong> e <strong>inteligencia artificial</strong>
+          que eliminan el trabajo manual, conectan tus sistemas y dejan trazabilidad de cada paso.
+          Ingeniería con más de 20 años de oficio, aplicada a la operación real de tu empresa.
+        </p>
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Hablemos de tu proyecto</a>
-          <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+          <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico gratuito
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#casos" class="btn btn-ghost">Ver casos reales</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>+20</dt><dd>años en ingeniería, sistemas y operación</dd></div>
+          <div><dt>24/7</dt><dd>flujos desatendidos con monitoreo y alertas</dd></div>
+          <div><dt>100%</dt><dd>documentado y entregado a tu empresa</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="cube-stage">
+          <div class="cube">
+            <span class="face f1"></span><span class="face f2"></span><span class="face f3"></span>
+            <span class="face f4"></span><span class="face f5"></span><span class="face f6"></span>
+          </div>
+          <div class="cube cube--inner">
+            <span class="face f1"></span><span class="face f2"></span><span class="face f3"></span>
+            <span class="face f4"></span><span class="face f5"></span><span class="face f6"></span>
+          </div>
+          <img src="assets/mark.png" alt="" class="cube-core" />
+          <div class="orbit">
+            <span class="node n1">n8n</span>
+            <span class="node n2">IA</span>
+            <span class="node n3">ERP</span>
+            <span class="node n4">SII</span>
+            <span class="node n5">WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <em>workflow · facturas-diarias</em>
+            <b class="live">en vivo</b>
+          </div>
+          <ol class="terminal-log" id="log"></ol>
         </div>
       </div>
-      <div class="hero-visual">
-        <img src="assets/logo.png" alt="Würfel" />
-      </div>
-    </div>
-    <div class="hero-grid" aria-hidden="true"></div>
-  </section>
-
-  <section class="logos-strip">
-    <div class="container logos-inner">
-      <span>Integramos con</span>
-      <div class="logos-list">
-        <span>n8n</span><span>Odoo</span><span>SAP</span><span>SII</span><span>Nubox</span><span>APIs</span>
-      </div>
     </div>
   </section>
 
-  <section class="section" id="nosotros">
-    <div class="container section-split">
-      <div class="section-heading">
-        <p class="eyebrow">Quiénes somos</p>
-        <h2>Software que hace que tu empresa trabaje de forma más inteligente</h2>
-      </div>
-      <p class="lead">
-        Würfel SpA es una empresa especializada en automatización de procesos e integración de sistemas
-        mediante inteligencia artificial y tecnologías de vanguardia. Ayudamos a las empresas a optimizar
-        sus operaciones, reducir tareas manuales y mejorar la toma de decisiones, desarrollando soluciones
-        personalizadas con plataformas como n8n, IA generativa, APIs e integraciones con sistemas como
-        Odoo, SAP, SII y Nubox. Nuestro objetivo es transformar procesos complejos en flujos de trabajo
-        eficientes, seguros y escalables, permitiendo que nuestros clientes se enfoquen en el crecimiento
-        de su negocio.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="servicios">
+  <!-- STACK -->
+  <section class="stack" aria-label="Tecnologías con las que trabajo">
     <div class="container">
-      <div class="section-heading center">
-        <p class="eyebrow">Qué hacemos</p>
-        <h2>Servicios</h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>Automatización de procesos</h3>
-          <p>Automatización de procesos empresariales para eliminar tareas manuales y repetitivas.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔗</div>
-          <h3>Integración de sistemas</h3>
-          <p>Integración entre plataformas y sistemas: ERP, CRM, APIs y servicios en la nube.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <h3>Soluciones con IA</h3>
-          <p>Implementación de soluciones con inteligencia artificial aplicadas a tu operación.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔀</div>
-          <h3>Flujos de trabajo con n8n</h3>
-          <p>Desarrollo de flujos de trabajo con n8n para conectar tus herramientas y datos.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🛠️</div>
-          <h3>Desarrollo a medida</h3>
-          <p>Desarrollo de aplicaciones y herramientas personalizadas según tus necesidades.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>Consultoría digital</h3>
-          <p>Consultoría en transformación digital y optimización de procesos.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🧩</div>
-          <h3>Soporte continuo</h3>
-          <p>Soporte, mantenimiento y mejora continua de tus soluciones tecnológicas.</p>
+      <p class="stack-label">Tecnologías e integraciones</p>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>n8n</span><span>Claude · Anthropic</span><span>OpenAI</span><span>Supabase</span><span>PostgreSQL</span>
+          <span>Vercel</span><span>GitHub</span><span>Next.js</span><span>Odoo</span><span>SAP</span>
+          <span>SII</span><span>Nubox</span><span>Google Workspace</span><span>WhatsApp API</span><span>SQL Server</span><span>APIs REST</span>
+          <span>n8n</span><span>Claude · Anthropic</span><span>OpenAI</span><span>Supabase</span><span>PostgreSQL</span>
+          <span>Vercel</span><span>GitHub</span><span>Next.js</span><span>Odoo</span><span>SAP</span>
+          <span>SII</span><span>Nubox</span><span>Google Workspace</span><span>WhatsApp API</span><span>SQL Server</span><span>APIs REST</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section cta-section" id="contacto">
-    <div class="container cta-inner">
-      <div class="section-heading center">
-        <p class="eyebrow">Conversemos</p>
-        <h2>¿Listo para automatizar tu empresa?</h2>
-        <p class="lead">Escríbenos y conversemos sobre cómo podemos ayudarte a optimizar tus procesos.</p>
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">01 — Servicios</p>
+        <h2>Lo que automatizo por ti</h2>
+        <p class="section-lead">Soluciones a medida, construidas sobre herramientas probadas y pensadas para que tu equipo las pueda operar sin depender de nadie.</p>
+      </header>
+
+      <div class="services">
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></svg></div>
+          <h3>Automatización de procesos</h3>
+          <p>Elimino tareas repetitivas: descarga y registro de documentos, cuadraturas, reportes, recordatorios y aprobaciones.</p>
+        </article>
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="7" rx="1.5"/><path d="M10 7.5h3a2 2 0 0 1 2 2V13"/></svg></div>
+          <h3>Integración de sistemas</h3>
+          <p>Conecto ERP, CRM, plataformas tributarias, planillas y APIs para que la información fluya sin digitar dos veces.</p>
+        </article>
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><rect x="7" y="7" width="10" height="10" rx="2.5"/><path d="M10 12h4M12 10v4"/></svg></div>
+          <h3>Agentes con IA</h3>
+          <p>Asistentes que leen correos, documentos y solicitudes, clasifican, extraen datos y responden con criterio definido por ti.</p>
+        </article>
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H8l-4 3z"/><path d="M8 10h8M8 13h5"/></svg></div>
+          <h3>Bots y notificaciones</h3>
+          <p>Flujos por WhatsApp y correo para avisos, renovaciones, cobranzas y seguimiento de clientes y proveedores.</p>
+        </article>
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Tableros y portales</h3>
+          <p>Paneles web con datos en tiempo real, portales para clientes y aplicaciones internas livianas, seguras y en la nube.</p>
+        </article>
+        <article class="card service reveal">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+          <h3>Consultoría y soporte</h3>
+          <p>Diagnóstico de procesos, hoja de ruta de digitalización, capacitación y mantención continua de lo implementado.</p>
+        </article>
       </div>
-      <div class="contact-card">
-        <div class="contact-item">
-          <span class="contact-label">Contacto</span>
-          <span class="contact-value">Ing. Alex Ricardo Meléndez</span>
+    </div>
+  </section>
+
+  <!-- METODO -->
+  <section class="section section--band" id="metodo">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">02 — Método</p>
+        <h2>Responsabilidad en cada etapa</h2>
+        <p class="section-lead">Una automatización mal hecha cuesta más que el trabajo manual. Por eso trabajo con un método claro, entregables concretos y control de riesgos desde el día uno.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Levanto el proceso actual contigo: quién hace qué, con qué sistemas, cuánto tiempo toma y dónde se producen los errores.</p>
+          <span class="step-out">Entregable · mapa del proceso y propuesta</span>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">02</span>
+          <h3>Diseño</h3>
+          <p>Defino el flujo automatizado, las reglas de negocio, los puntos de aprobación humana y cómo se manejan las excepciones.</p>
+          <span class="step-out">Entregable · diseño validado y cronograma</span>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">03</span>
+          <h3>Implementación</h3>
+          <p>Construyo y pruebo con datos reales en un entorno controlado. Nada pasa a producción sin tu visto bueno.</p>
+          <span class="step-out">Entregable · flujo en producción y pruebas</span>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">04</span>
+          <h3>Operación y mejora</h3>
+          <p>Monitoreo, alertas ante fallas, documentación y capacitación a tu equipo. Ajustes continuos según el uso real.</p>
+          <span class="step-out">Entregable · manual, accesos y soporte</span>
+        </li>
+      </ol>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+          <div><h4>Confidencialidad</h4><p>Tus datos se tratan con acuerdos de confidencialidad y accesos de mínimo privilegio.</p></div>
         </div>
-        <div class="contact-divider"></div>
-        <a class="contact-item" href="mailto:wurfel.cl@gmail.com">
-          <span class="contact-label">Correo</span>
-          <span class="contact-value">wurfel.cl@gmail.com</span>
-        </a>
-        <div class="contact-divider"></div>
-        <a class="contact-item" href="tel:+56951120146">
-          <span class="contact-label">Teléfono</span>
-          <span class="contact-value">+56 9 5112 0146</span>
-        </a>
+        <div class="pillar reveal">
+          <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>
+          <div><h4>Todo documentado</h4><p>Cada flujo queda descrito: qué hace, de qué depende y cómo se recupera ante un error.</p></div>
+        </div>
+        <div class="pillar reveal">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+          <div><h4>Tuyo, no mío</h4><p>Las cuentas, el código y los flujos quedan a nombre de tu empresa. Sin cajas negras.</p></div>
+        </div>
+        <div class="pillar reveal">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          <div><h4>Monitoreo activo</h4><p>Alertas automáticas cuando algo falla, para corregir antes de que el problema llegue a ti.</p></div>
+        </div>
       </div>
-      <a href="mailto:wurfel.cl@gmail.com" class="btn btn-primary btn-lg">Escríbenos un correo</a>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section class="section" id="casos">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">03 — Casos</p>
+        <h2>Soluciones funcionando hoy</h2>
+        <p class="section-lead">Proyectos reales desarrollados para empresas en Chile. Por confidencialidad, los clientes se describen por su rubro.</p>
+      </header>
+
+      <div class="cases">
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">Inmobiliaria</span><span class="case-id">#01</span></div>
+          <h3>Facturación y documentos tributarios en piloto automático</h3>
+          <p>Descarga diaria de facturas PDF y XML desde la plataforma de facturación, archivo ordenado y tablero de facturación por cliente con alertas de diferencias.</p>
+          <p class="case-result">Antes: descarga y revisión manual cada mes. Ahora: proceso desatendido y conciliado.</p>
+          <ul class="chips"><li>n8n</li><li>Node.js</li><li>Vercel</li><li>Nubox / SII</li></ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">Compras</span><span class="case-id">#02</span></div>
+          <h3>Agente de compras con IA</h3>
+          <p>Las solicitudes de compra entran por un formulario; la IA las interpreta, clasifica y prepara, y el flujo notifica a proveedores y aprobadores por correo y WhatsApp.</p>
+          <p class="case-result">Solicitudes estandarizadas, trazables y sin cadenas de correo perdidas.</p>
+          <ul class="chips"><li>n8n</li><li>Claude</li><li>WhatsApp</li><li>Next.js</li></ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">Telemática · GPS</span><span class="case-id">#03</span></div>
+          <h3>Control de pórticos y peajes de flotas</h3>
+          <p>Cruce automático de posiciones GPS con geocercas de pórticos para detectar pasadas, estimar costos y entregar a cada cliente un portal con su reporte semanal.</p>
+          <p class="case-result">Información que antes se armaba a mano, ahora disponible cada semana por cliente.</p>
+          <ul class="chips"><li>Supabase</li><li>Next.js</li><li>Mapas</li><li>Cron</li></ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">Gestión documental</span><span class="case-id">#04</span></div>
+          <h3>Lectura inteligente de contratos y planos</h3>
+          <p>La IA leyó más de 80 planos y contratos, incluidos escaneos sin texto, y extrajo superficies, estacionamientos y condiciones a fichas estructuradas.</p>
+          <p class="case-result">Semanas de revisión documental resueltas en días, con alertas de inconsistencias.</p>
+          <ul class="chips"><li>Claude</li><li>OCR</li><li>Excel</li><li>PDF</li></ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">Operaciones</span><span class="case-id">#05</span></div>
+          <h3>Proyectos, órdenes de trabajo y bitácora</h3>
+          <p>Plataforma para fichas de proyectos, órdenes de trabajo, órdenes de compra y bitácora de avance, con montos en UF y control por etapa.</p>
+          <p class="case-result">Un solo lugar para el estado de cada proyecto y su gasto.</p>
+          <ul class="chips"><li>Web app</li><li>Base de datos</li><li>UF</li></ul>
+        </article>
+
+        <article class="card case reveal">
+          <div class="case-top"><span class="tag">IA conversacional</span><span class="case-id">#06</span></div>
+          <h3>Asistente por voz y comunicaciones automáticas</h3>
+          <p>Asistente por voz que ejecuta tareas y consultas, y un boletín tecnológico semanal que se genera, se aprueba con un botón y se envía solo.</p>
+          <p class="case-result">Comunicación interna constante sin tiempo de redacción.</p>
+          <ul class="chips"><li>Android</li><li>Claude</li><li>n8n</li><li>Gmail</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section class="section section--band" id="perfil">
+    <div class="container profile">
+      <div class="profile-card reveal">
+        <div class="profile-mark"><img src="assets/mark.png" alt="Isotipo de Würfel" /></div>
+        <p class="kicker">04 — Detrás de Würfel</p>
+        <h2>Ing. Alex Meléndez</h2>
+        <p class="profile-role">Ingeniero Electrónico en Computación · Automatización de procesos con IA</p>
+        <p>
+          Más de 20 años resolviendo problemas técnicos donde la falla no es opción: equipos críticos de
+          preimpresión, sistemas de seguridad, comando centralizado y gestión logística. Hoy aplico esa misma
+          disciplina a la automatización con inteligencia artificial.
+        </p>
+        <p>
+          <strong>Würfel</strong> —"cubo" en alemán— representa esa forma de trabajar: estructura sólida por fuera,
+          inteligencia en el centro.
+        </p>
+        <a href="#contacto" class="btn btn-primary">Conversemos</a>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal"><span class="t-year">Hoy</span><div><h4>Automatización con IA</h4><p>Infraestructura automatizada con n8n, Vercel y GitHub; integración de Claude en compras, facturación y análisis de proveedores.</p></div></li>
+        <li class="reveal"><span class="t-year">2025—26</span><div><h4>Operaciones y mantenimiento tecnológico</h4><p>Analista de operaciones en telemática (SLAs, KPIs) y mantenimiento preventivo y correctivo de sistemas complejos.</p></div></li>
+        <li class="reveal"><span class="t-year">2017—23</span><div><h4>Jefe de Control de Gestión · Logística</h4><p>Desarrollo del sistema de planificación de flota en C# y administración de base de datos SQL Server.</p></div></li>
+        <li class="reveal"><span class="t-year">2013—16</span><div><h4>Director · Sistemas de seguridad</h4><p>Proyectos de CCTV, alarmas y sensores: desde el levantamiento hasta la entrega y capacitación.</p></div></li>
+        <li class="reveal"><span class="t-year">2006—13</span><div><h4>Kodak · AGFA</h4><p>Key Account Manager e ingeniero especialista: instalación y soporte de equipos críticos de preprensa.</p></div></li>
+        <li class="reveal"><span class="t-year">2003—10</span><div><h4>Docencia universitaria</h4><p>Profesor y director de escuelas de Electrónica, Mecánica y Electricidad. Programación, sistemas digitales y microprocesadores.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container contact">
+      <div class="contact-info">
+        <p class="kicker">05 — Contacto</p>
+        <h2>Cuéntame qué proceso quieres automatizar</h2>
+        <p class="section-lead">El primer diagnóstico no tiene costo. Revisamos tu caso y te digo con franqueza si la automatización vale la pena, cuánto tomaría y qué resultado esperar.</p>
+
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <div><span>Correo</span><a href="mailto:wurfel.cl@gmail.com">wurfel.cl@gmail.com</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1c-1-.4-1.6-1-2-2l1-1-1-2z"/></svg>
+            <div><span>WhatsApp</span><a href="https://wa.me/56951120146?text=Hola%20W%C3%BCrfel%2C%20quiero%20automatizar%20un%20proceso" target="_blank" rel="noopener">+56 9 5112 0146</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><span>Respuesta</span><p>Dentro de 1 día hábil</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div><span>Cobertura</span><p>Chile · trabajo remoto y presencial</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form card" id="contact-form" novalidate>
+        <div class="form-head">
+          <span class="form-title">Solicitud de servicio</span>
+          <span class="form-hint">Campos con * son obligatorios</span>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span>Nombre y apellido *</span>
+            <input type="text" name="nombre" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span>Empresa *</span>
+            <input type="text" name="empresa" autocomplete="organization" required />
+          </label>
+          <label class="field">
+            <span>Correo corporativo *</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span>Teléfono</span>
+            <input type="tel" name="telefono" autocomplete="tel" placeholder="+56 9 ..." />
+          </label>
+          <label class="field">
+            <span>Cargo</span>
+            <input type="text" name="cargo" autocomplete="organization-title" />
+          </label>
+          <label class="field">
+            <span>Tamaño de la empresa</span>
+            <select name="tamano">
+              <option value="">Selecciona</option>
+              <option>1 a 10 personas</option>
+              <option>11 a 50 personas</option>
+              <option>51 a 200 personas</option>
+              <option>Más de 200 personas</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="field">
+          <legend>¿Qué necesitas? *</legend>
+          <div class="options" data-group="servicio">
+            <label><input type="checkbox" name="servicio" value="Automatización de procesos" /><span>Automatizar procesos</span></label>
+            <label><input type="checkbox" name="servicio" value="Integración de sistemas" /><span>Integrar sistemas</span></label>
+            <label><input type="checkbox" name="servicio" value="Agente con IA" /><span>Agente con IA</span></label>
+            <label><input type="checkbox" name="servicio" value="Bot WhatsApp / notificaciones" /><span>Bot / notificaciones</span></label>
+            <label><input type="checkbox" name="servicio" value="Tablero o portal" /><span>Tablero o portal</span></label>
+            <label><input type="checkbox" name="servicio" value="Consultoría / diagnóstico" /><span>Consultoría</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span>Sistemas que usan hoy</span>
+          <input type="text" name="sistemas" placeholder="Ej.: Excel, Odoo, SAP, Nubox, Gmail, WhatsApp..." />
+        </label>
+
+        <label class="field">
+          <span>Describe el proceso o problema *</span>
+          <textarea name="mensaje" rows="5" required placeholder="¿Qué tarea se repite? ¿Quién la hace, cada cuánto y cuánto tiempo toma?"></textarea>
+        </label>
+
+        <label class="field">
+          <span>¿Para cuándo lo necesitas?</span>
+          <select name="plazo">
+            <option value="">Selecciona</option>
+            <option>Lo antes posible</option>
+            <option>Dentro de 1 mes</option>
+            <option>En 1 a 3 meses</option>
+            <option>Estoy explorando opciones</option>
+          </select>
+        </label>
+
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <label class="consent">
+          <input type="checkbox" name="consentimiento" required />
+          <span>Acepto que Würfel use estos datos solo para responder a mi solicitud.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="btn-label">Enviar solicitud</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="year"></span> Würfel SpA. Todos los derechos reservados.</span>
+    <div class="brand">
+      <img src="assets/mark.png" alt="" class="brand-mark" />
+      <span class="brand-name">Würfel</span>
+    </div>
+    <p>Automatización de procesos e integración de sistemas con inteligencia artificial.</p>
+    <p class="footer-meta">&copy; <span id="year"></span> Würfel · <a href="mailto:wurfel.cl@gmail.com">wurfel.cl@gmail.com</a></p>
   </div>
 </footer>
 
